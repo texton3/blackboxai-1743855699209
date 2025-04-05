@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .sidebar-item:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body class="bg-[#0f0f0f] text-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-[#0f0f0f] flex items-center justify-between px-4 py-2 z-50 border-b border-[#303030]">
+        <div class="flex items-center">
+            <i class="fas fa-bars mr-4 text-xl cursor-pointer"></i>
+            <div class="flex items-center">
+                <i class="fab fa-youtube text-red-600 text-3xl mr-1"></i>
+                <span class="text-xl font-semibold">YouTube</span>
+            </div>
+        </div>
+        
+        <div class="flex items-center w-1/2">
+            <input type="text" placeholder="Search" class="w-full bg-[#121212] border border-[#303030] rounded-l-full px-4 py-2 focus:outline-none focus:border-blue-500">
+            <button class="bg-[#222222] px-5 py-2 rounded-r-full border border-l-0 border-[#303030]">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+            <i class="fas fa-video text-xl cursor-pointer"></i>
+            <i class="fas fa-bell text-xl cursor-pointer"></i>
+            <div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center cursor-pointer">A</div>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="fixed top-14 left-0 bottom-0 w-60 bg-[#0f0f0f] overflow-y-auto pt-2 hidden md:block">
+        <div class="px-4 py-2">
+            <div class="sidebar-item flex items-center px-3 py-2 rounded-lg cursor-pointer">
+                <i class="fas fa-home mr-4"></i>
+                <span>Home</span>
+            </div>
+            <div class="sidebar-item flex items-center px-3 py-2 rounded-lg cursor-pointer">
+                <i class="fas fa-compass mr-4"></i>
+                <span>Explore</span>
+            </div>
+            <div class="sidebar-item flex items-center px-3 py-2 rounded-lg cursor-pointer">
+                <i class="fas fa-play-circle mr-4"></i>
+                <span>Shorts</span>
+            </div>
+            <div class="sidebar-item flex items-center px-3 py-2 rounded-lg cursor-pointer">
+                <i class="fas fa-subscription mr-4"></i>
+                <span>Subscriptions</span>
+            </div>
+        </div>
+        
+        <div class="border-t border-[#303030] mt-2 pt-2 px-4">
+            <h3 class="font-medium px-3 py-1">Library</h3>
+            <div class="sidebar-item flex items-center px-3 py-2 rounded-lg cursor-pointer">
+                <i class="fas fa-history mr-4"></i>
+                <span>History</span>
+            </div>
+            <div class="sidebar-item flex items-center px-3 py-2 rounded-lg cursor-pointer">
+                <i class="fas fa-clock mr-4"></i>
+                <span>Watch later</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="ml-0 md:ml-60 mt-14 p-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Video Cards -->
+            <div class="bg-[#1f1f1f] rounded-lg overflow-hidden cursor-pointer">
+                <div class="relative">
+                    <img src="https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Video thumbnail" class="w-full">
+                    <span class="absolute bottom-1 right-1 bg-black bg-opacity-80 px-1 text-xs rounded">10:30</span>
+                </div>
+                <div class="p-3">
+                    <div class="flex">
+                        <div class="w-9 h-9 rounded-full bg-gray-500 mr-3"></div>
+                        <div>
+                            <h3 class="font-medium line-clamp-2">Never Gonna Give You Up - Rick Astley</h3>
+                            <p class="text-gray-400 text-sm">Rick Astley • 1.2B views • 3 years ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat similar video cards -->
+            <div class="bg-[#1f1f1f] rounded-lg overflow-hidden cursor-pointer">
+                <div class="relative">
+                    <img src="https://i.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg" alt="Video thumbnail" class="w-full">
+                    <span class="absolute bottom-1 right-1 bg-black bg-opacity-80 px-1 text-xs rounded">4:13</span>
+                </div>
+                <div class="p-3">
+                    <div class="flex">
+                        <div class="w-9 h-9 rounded-full bg-gray-500 mr-3"></div>
+                        <div>
+                            <h3 class="font-medium line-clamp-2">Gangnam Style - PSY</h3>
+                            <p class="text-gray-400 text-sm">officialpsy • 4.5B views • 10 years ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#1f1f1f] rounded-lg overflow-hidden cursor-pointer">
+                <div class="relative">
+                    <img src="https://i.ytimg.com/vi/JGwWNGJdvx8/hqdefault.jpg" alt="Video thumbnail" class="w-full">
+                    <span class="absolute bottom-1 right-1 bg-black bg-opacity-80 px-1 text-xs rounded">3:47</span>
+                </div>
+                <div class="p-3">
+                    <div class="flex">
+                        <div class="w-9 h-9 rounded-full bg-gray-500 mr-3"></div>
+                        <div>
+                            <h3 class="font-medium line-clamp-2">Shape of You - Ed Sheeran</h3>
+                            <p class="text-gray-400 text-sm">Ed Sheeran • 5.7B views • 6 years ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#1f1f1f] rounded-lg overflow-hidden cursor-pointer">
+                <div class="relative">
+                    <img src="https://i.ytimg.com/vi/kJQP7kiw5Fk/hqdefault.jpg" alt="Video thumbnail" class="w-full">
+                    <span class="absolute bottom-1 right-1 bg-black bg-opacity-80 px-1 text-xs rounded">4:16</span>
+                </div>
+                <div class="p-3">
+                    <div class="flex">
+                        <div class="w-9 h-9 rounded-full bg-gray-500 mr-3"></div>
+                        <div>
+                            <h3 class="font-medium line-clamp-2">Despacito - Luis Fonsi ft. Daddy Yankee</h3>
+                            <p class="text-gray-400 text-sm">Luis Fonsi • 7.8B views • 6 years ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
